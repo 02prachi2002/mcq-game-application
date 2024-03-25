@@ -1,23 +1,21 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react';
+import QuestionList from './components/QuestionList';
+import "./App.css"
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="App ">
+      <section id="accueil">
+
+<div class="triangle_rose"></div>
+<div class="triangle_vert"></div>
+    
+  <header>
+  <h1 className=' text-red-700 p-4 text-center font-extrabold text-9xl '>LET'S TEST YOUR KNOWLEDGE</h1>
+      <QuestionList />
+  </header>
+</section>
+      
     </div>
   );
 }

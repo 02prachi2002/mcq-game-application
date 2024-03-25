@@ -1,0 +1,300 @@
+
+  
+  .btn-flip {
+    opacity: 1;
+    font-size: larger;
+    font-weight: bolder;
+    outline: 0;
+    color: #fff;
+    line-height: 40px;
+    position: relative;
+    text-align: center;
+    letter-spacing: 2px;
+    display: inline-block;
+    text-decoration: none;
+    font-family: "Open Sans";
+    text-transform: uppercase;
+  }
+  .btn-flip:hover:after {
+    opacity: 1;
+    transform: translateY(0) rotateX(0);
+  }
+  .btn-flip:hover:before {
+    opacity: 0;
+    transform: translateY(50%) rotateX(90deg);
+  }
+  .btn-flip:after {
+    top: 0;
+    left: 0;
+    opacity: 0;
+    width: 100%;
+    color: #aa105f;
+    display: block;
+    transition: 0.9s;
+    position: absolute;
+    background: #f4c2d7;
+    content: attr(data-back);
+    transform: translateY(-50%) rotateX(90deg);
+  }
+  .btn-flip:before {
+    top: 0;
+    left: 0;
+    opacity: 1;
+    color: #6dd208;
+    display: block;
+    padding: 0 30px;
+    line-height: 40px;
+    transition: 0.9s;
+    position: relative;
+    background: #323237;
+    content: attr(data-front);
+    transform: translateY(0) rotateX(0);
+  }
+  .sub-btn{
+    font-family: Arial, Helvetica, sans-serif;
+  font-weight: bold;
+  color: white;
+  background-color: #171717;
+  padding: 0.5rem 1.5rem;
+  border: none;
+  /* border-radius: .6rem; */
+  position: relative;
+  cursor: pointer;
+  overflow: hidden;
+  }
+  .sub-btn span:not(:nth-child(6)) {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    height: 30px;
+    width: 30px;
+    background-color: #25d531;
+    border-radius: 50%;
+    transition: .6s ease;
+  }
+  
+  .sub-btn span:nth-child(6) {
+    position: relative;
+  }
+  
+  .sub-btn span:nth-child(1) {
+    transform: translate(-3.3em, -4em);
+  }
+  
+  .sub-btn span:nth-child(2) {
+    transform: translate(-6em, 1.3em);
+  }
+  
+ .sub-btn span:nth-child(3) {
+    transform: translate(-.2em, 1.8em);
+  }
+  
+  .sub-btn span:nth-child(4) {
+    transform: translate(3.5em, 1.4em);
+  }
+  
+  .sub-btn span:nth-child(5) {
+    transform: translate(3.5em, -3.8em);
+  }
+  
+  .sub-btn:hover span:not(:nth-child(6)) {
+    transform: translate(-50%, -50%) scale(4);
+    transition: 1.5s ease;
+  }
+    
+  .noselect {
+    width: 10rem;
+    height: 3rem;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    background: red;
+    border: none;
+    box-shadow: 1px 1px 3px rgba(0,0,0,0.15);
+    background: #e62222;
+
+   }
+   
+   .noselect, .noselect span {
+    transition: 200ms;
+   }
+   
+   .noselect .text {
+    transform: translateX(35px);
+    color: white;
+    font-weight: bold;
+   }
+   
+   .noselect .icon {
+    position: absolute;
+    border-left: 1px solid #c41b1b;
+    transform: translateX(110px);
+    height: 40px;
+    width: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+   }
+   
+  .noselect svg {
+    width: 15px;
+    fill: #eee;
+   }
+   
+   .noselect:hover {
+    background: #ff3636;
+   }
+   
+   .noselect:hover .text {
+    color: transparent;
+   }
+   
+   .noselect:hover .icon {
+    width: 150px;
+    border-left: none;
+    transform: translateX(0);
+   }
+   
+   .noselect:focus {
+    outline: none;
+   }
+   
+   .noselect:active .icon svg {
+    transform: scale(0.8);
+   }
+
+   
+   .next-btn{
+    background-color: #ffffff00;
+    color: #fff;
+    width: 8.5em;
+    height: 2.9em;
+    border: #3654ff 0.2em solid;
+    /* border-radius: 11px; */
+    text-align: right;
+    transition: all 0.6s ease;
+  }
+  
+  .next-btn:hover {
+    background-color: #3654ff;
+    cursor: pointer;
+  }
+  
+  .next-btn svg {
+    width: 1.45em;
+    margin: 0.02em 1em 1.37em;
+    position: absolute;
+    display: flex;
+    transition: all 0.6s ease;
+  }
+  
+  .next-btn:hover svg {
+    transform: translateX(5px);
+    color: white;
+  }
+  
+ .next-btn .text{
+  font-weight: bolder;
+  margin: 0 1.5em;
+  font-size: 1.1em;
+  color: black;
+ }
+ .next-btn:hover .text:hover{
+  color: white;
+ }
+
+ .tgbtn {
+
+  position: relative;
+  padding: 0.75rem 0.8rem;
+  border: none;
+  color: black;
+  cursor: pointer;
+  background-color: #7eb6f6;
+  transition: all 0.2s ease;
+}
+
+.tgbtn:active {
+  transform: scale(0.96);
+}
+
+.tgbtn:before,
+.tgbtn:after {
+  position: absolute;
+  content: "";
+  width: 150%;
+  left: 50%;
+  height: 100%;
+  transform: translateX(-50%);
+  z-index: -1000;
+  background-repeat: no-repeat;
+}
+
+.tgbtn:hover:before {
+  top: -70%;
+  background-image: radial-gradient(circle, #f690bc 20%, transparent 20%),
+    radial-gradient(circle, transparent 20%, #f690bc 20%, transparent 30%),
+    radial-gradient(circle, #f690bc 20%, transparent 20%),
+    radial-gradient(circle, #f690bc 20%, transparent 20%),
+    radial-gradient(circle, transparent 10%, #f690bc 15%, transparent 20%),
+    radial-gradient(circle, #f690bc 20%, transparent 20%),
+    radial-gradient(circle, #f690bc 20%, transparent 20%),
+    radial-gradient(circle, #f690bc 20%, transparent 20%),
+    radial-gradient(circle, #f690bc 20%, transparent 20%);
+  background-size: 10% 10%, 20% 20%, 15% 15%, 20% 20%, 18% 18%, 10% 10%, 15% 15%,
+    10% 10%, 18% 18%;
+  background-position: 50% 120%;
+  animation: greentopBubbles 0.6s ease;
+  color: white;
+}
+
+@keyframes greentopBubbles {
+  0% {
+    background-position: 5% 90%, 10% 90%, 10% 90%, 15% 90%, 25% 90%, 25% 90%,
+      40% 90%, 55% 90%, 70% 90%;
+  }
+
+  50% {
+    background-position: 0% 80%, 0% 20%, 10% 40%, 20% 0%, 30% 30%, 22% 50%,
+      50% 50%, 65% 20%, 90% 30%;
+  }
+
+  100% {
+    background-position: 0% 70%, 0% 10%, 10% 30%, 20% -10%, 30% 20%, 22% 40%,
+      50% 40%, 65% 10%, 90% 20%;
+    background-size: 0% 0%, 0% 0%, 0% 0%, 0% 0%, 0% 0%, 0% 0%;
+  }
+}
+
+.tgbtn:hover::after {
+  bottom: -70%;
+  background-image: radial-gradient(circle, #f690bc 20%, transparent 20%),
+    radial-gradient(circle, #f690bc 20%, transparent 20%),
+    radial-gradient(circle, transparent 10%, #f690bc 15%, transparent 20%),
+    radial-gradient(circle, #f690bc 20%, transparent 20%),
+    radial-gradient(circle, #f690bc 20%, transparent 20%),
+    radial-gradient(circle, #f690bc 20%, transparent 20%),
+    radial-gradient(circle, #f690bc 20%, transparent 20%);
+  background-size: 15% 15%, 20% 20%, 18% 18%, 20% 20%, 15% 15%, 20% 20%, 18% 18%;
+  background-position: 50% 0%;
+  animation: greenbottomBubbles 0.6s ease;
+}
+
+@keyframes greenbottomBubbles {
+  0% {
+    background-position: 10% -10%, 30% 10%, 55% -10%, 70% -10%, 85% -10%,
+      70% -10%, 70% 0%;
+  }
+
+  50% {
+    background-position: 0% 80%, 20% 80%, 45% 60%, 60% 100%, 75% 70%, 95% 60%,
+      105% 0%;
+  }
+
+  100% {
+    background-position: 0% 90%, 20% 90%, 45% 70%, 60% 110%, 75% 80%, 95% 70%,
+      110% 10%;
+    background-size: 0% 0%, 0% 0%, 0% 0%, 0% 0%, 0% 0%, 0% 0%;
+  }
+}
